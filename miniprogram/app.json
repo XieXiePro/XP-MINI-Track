@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/Home/Home",
+    "pages/Share/Share"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "XP-MINI-Host",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "plugins": {
+    "XP-plugin": {
+      "version": "1.0.0",
+      "provider": "wxe7dc8dc22386525a"
+    }
+  }
+}

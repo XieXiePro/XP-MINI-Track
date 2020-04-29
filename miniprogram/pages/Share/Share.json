@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "小程序分享卡片插件",
+  "usingComponents": {
+    "CanvasDrawer": "plugin://XP-plugin/CanvasDrawer-component",
+    "NavBar": "plugin://XP-plugin/NavBar-component"
+  },
+  "navigationStyle": "custom"
+}

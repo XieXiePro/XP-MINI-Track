@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小程序宿主工程",
+  "usingComponents": {
+    "Banner": "../../components/Banner/Banner"
+  }
+}

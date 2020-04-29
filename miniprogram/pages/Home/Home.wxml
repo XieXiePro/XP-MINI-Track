@@ -1,0 +1,31 @@
+<view wx:if="{{!dataList}}">
+  <view class="empty-page">
+    <view class=" empty-view">
+      <view class="course-null">空空如也~</view>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <!-- 数据列表 -->
+  <view class="list-container">
+    <!--多个数据使用图片轮播展示 -->
+    <view wx:if="{{dataList.length>1}}">
+      <Banner bannerData="{{dataList}}" currentIndex="{{index}}"></Banner>
+    </view>
+    <!--单个数据使用一张图片展示 -->
+    <view wx:else>
+      <view wx:for="{{dataList}}" wx:key="index">
+        <image class="list-item-image" lazy-load="{{true}}" src="{{item.imgUrl}}" bindtap='goCourseCenter' mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 后台封装的list返回 -->
+  <view class='list-content'>
+    <view class="list-item" wx:for="{{dataList[0].courseImgs}}" wx:key="index">
+      <image class='img-content' src="{{item.imgUrl}}" lazy-load="{{true}}" mode='widthFix' data-image="{{item}}"></image>
+    </view>
+  </view>
+  <view class="row bottom-view">
+    <view class="bottom-btn row" type="primary" bindtap="goShare" data-name="goShare" data-text="下一页">下一页</view>
+  </view>
+</view>

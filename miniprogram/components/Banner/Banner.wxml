@@ -1,0 +1,7 @@
+<swiper class="swiper" current="{{currentIndex}}" style='height:{{bannerHeight}}rpx' indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+  <block wx:for="{{bannerData}}" wx:key="id">
+    <swiper-item class="swiper-item" data-item="{{item}}" bindtap="linkToPage">
+      <image class="swiper-image" src="{{item.imgUrl}}" bindload="loadImg" mode='aspectFill' lazy-load="{{true}}" />
+    </swiper-item>
+  </block>
+</swiper>

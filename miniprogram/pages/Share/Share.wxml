@@ -1,0 +1,25 @@
+<NavBar title-text="自定义标题" back-icon="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588161584234&di=f6ac575ffe7d3aa053cf5a04524629c6&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F01%2F47%2F99%2F9957440da5c798e.jpg" bindback="back" />
+<view>
+  <view class='loading-page col' hidden="{{!isPainting}}">
+    <view class="circle-line row">
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+      <text></text>
+    </view>
+    <view class="tui-loading-tip">正在绘制...
+    </view>
+  </view>
+  <view class="container">
+    <image src="{{shareImage}}" class="share-image"></image>
+    <CanvasDrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage" />
+    <view class="bottom_btn">
+      <button class='to-save-btn' bindtap='eventSave' data-name="eventSave" data-text="保存图片">保存图片</button>
+      <button class='to-share-btn' open-type='share'>分享好友</button>
+    </view>
+  </view>
+</view>

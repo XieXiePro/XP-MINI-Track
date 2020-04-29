@@ -1,0 +1,179 @@
+page {
+  background: #eeeeee;
+}
+
+.container {
+  margin: 160rpx 55rpx 0rpx 55rpx;
+}
+
+.share-image {
+  width: 640rpx;
+  height: 1000rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12rpx;
+}
+
+.to-save-btn {
+  margin: 0 auto;
+  height: 80rpx;
+  right: 15rpx;
+  width: 300rpx;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  top: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.to-share-btn {
+  margin: 0 auto;
+  left: 15rpx;
+  top: 30rpx;
+  width: 300rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  background: linear-gradient(90deg, rgba(253, 230, 79, 1), rgba(255, 204, 0, 1));
+  color: rgba(51, 51, 51, 1);
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom_btn {
+  display: flex;
+}
+
+.bottom_view {
+  align-items: center;
+  display: flex;
+}
+
+.loading-page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 400rpx;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.tui-loading-row {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.tui-loading-cell {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  text-align: center;
+  justify-content: center;
+}
+
+.tui-loading-tip {
+  color: rgba(255, 204, 0, 1);
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+/*动画一：单个渐变  */
+
+.circle-line {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+}
+
+.circle-line text {
+  display: block;
+  width: 50%;
+  height: 5px;
+  opacity: 0.7;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: 0px;
+  transform-origin: center right;
+  animation: circle 1.5s linear infinite;
+}
+
+.circle-line text::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: rgba(255, 204, 0, 1);
+}
+
+.circle-line text:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: 0.2s;
+}
+
+.circle-line text:nth-child(2) {
+  transform: rotate(45deg);
+  animation-delay: 0.4s;
+}
+
+.circle-line text:nth-child(3) {
+  transform: rotate(90deg);
+  animation-delay: 0.6s;
+}
+
+.circle-line text:nth-child(4) {
+  transform: rotate(135deg);
+  animation-delay: 0.8s;
+}
+
+.circle-line text:nth-child(5) {
+  transform: rotate(180deg);
+  animation-delay: 1s;
+}
+
+.circle-line text:nth-child(6) {
+  transform: rotate(225deg);
+  animation-delay: 1.2s;
+}
+
+.circle-line text:nth-child(7) {
+  transform: rotate(270deg);
+  animation-delay: 1.4s;
+}
+
+.circle-line text:nth-child(8) {
+  transform: rotate(315deg);
+  animation-delay: 1.6s;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 0.05;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
