@@ -1,5 +1,6 @@
 import {
-  SAVEIMAGE
+  SAVEIMAGE,
+  Page
 } from '../../utils/manage'
 Page({
   data: {

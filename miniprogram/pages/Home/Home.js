@@ -2,6 +2,7 @@ import {
   REQUEST,
   TOAST,
   ROUTER,
+  Page,
   homeData
 } from '../../utils/manage'
 Page({
