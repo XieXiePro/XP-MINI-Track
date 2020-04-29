@@ -194,10 +194,10 @@ type: "tap"
 
 ### 总结记录
 
-1、初始化时配置 trackApp:true启用自动上报小程序的 启动 、显示 、隐藏 事件；未使用小程序插件，SDK 提供 proxyPage:true 开关对 Page 开启代理模式。 会自动上报页面相关的预置事件，如 browse_wxapp_page等 。已使用小程序插件，SDK 提供 sdk.page 支持对 Page 的改造，另外需配置usePlugin: true， 是否使用插件，默认是：false。
-2、建议文档从头到尾的读，读3遍！！！包括官方[产品介绍](https://mp.zhls.qq.com/youshu-docs/start/youshu_intro.html)和[产品接入](https://mp.zhls.qq.com/youshu-docs/develop/dev_account/dev_module.html)文档。
-3、仔细看[测试点文档](https://mp.zhls.qq.com/youshu-docs/develop/dev_account/dev_process_test.html)，因为没看仔细文档，硬是找了3天问题，有数那边工作人员也一起帮忙找问题，结果修改后的上报数据和修改前相差无几，还好在修修补补的过程中，发现了一些其他问题，也算有所收获。
+ - 1、初始化时配置 trackApp:true启用自动上报小程序的 启动 、显示 、隐藏 事件；未使用小程序插件，SDK 提供 proxyPage:true 开关对 Page 开启代理模式。 会自动上报页面相关的预置事件，如 browse_wxapp_page等 。已使用小程序插件，SDK 提供 sdk.page 支持对 Page 的改造，另外需配置usePlugin: true， 是否使用插件，默认是：false。
+ - 2、建议文档从头到尾的读，读3遍！！！包括官方[产品介绍](https://mp.zhls.qq.com/youshu-docs/start/youshu_intro.html)和[产品接入](https://mp.zhls.qq.com/youshu-docs/develop/dev_account/dev_module.html)文档。
+ - 3、仔细看[测试点文档](https://mp.zhls.qq.com/youshu-docs/develop/dev_account/dev_process_test.html)，因为没看仔细文档，硬是找了3天问题，有数那边工作人员也一起帮忙找问题，结果修改后的上报数据和修改前相差无几，还好在修修补补的过程中，发现了一些其他问题，也算有所收获。
 ![图片.png](https://upload-images.jianshu.io/upload_images/2783386-e20d806a113c6c69?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-4、在接入某个原来接入mta腾讯移动分析的小程序项目中，onShareAppMessage方法的res有问题，导致有数SDK获取不到分享类型报错，产生原因参考：
+ - 4、在接入某个原来接入mta腾讯移动分析的小程序项目中，onShareAppMessage方法的res有问题，导致有数SDK获取不到分享类型报错，产生原因参考：
 [onShareAppMessage方法的res问题](https://developers.weixin.qq.com/community/develop/doc/0002429b170388b0d5c7cdf2a51400?highLine=onShareAppMessage%2520res)，我目前的解决办法是移除mta SDK。
-5、使用微信开发工具 wechat_devtools_1.02.1911180_x64，渠道chan_wxapp_scene偶尔会丢失，查后发现只有在编译器模拟环境会出现该问题，在真机环境下不会。
+ - 5、使用微信开发工具 wechat_devtools_1.02.1911180_x64，渠道chan_wxapp_scene偶尔会丢失，查后发现只有在编译器模拟环境会出现该问题，在真机环境下不会。
